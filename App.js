@@ -7,10 +7,17 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Initializing Mines!</Text>
+
       <Text style={styles.introduction}>
         Grade size: {params.getRowsAmount()}x{params.getColumnsAmount()}
       </Text>
+
       <Field />
+      <Field opened />
+      <Field opened nearMines={1} />
+      <Field opened nearMines={2} />
+      <Field opened nearMines={3} />
+      <Field opened nearMines={6} />
     </View>
   );
 }
