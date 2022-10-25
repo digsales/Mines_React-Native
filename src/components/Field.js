@@ -56,6 +56,6 @@ const styles = StyleSheet.create({
   },
   exploded: {
     backgroundColor: "red",
-    borderColor: "red",
+    borderColor: "#B22222",
   },
 });
