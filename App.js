@@ -1,14 +1,16 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import params from "./src/params";
+import Field from "./src/components/Field";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>Iniciando o Mines!</Text>
+      <Text style={styles.welcome}>Initializing Mines!</Text>
       <Text style={styles.introduction}>
-        Tamanho da grade: {params.getRowsAmount()}x{params.getColumnsAmount()}
+        Grade size: {params.getRowsAmount()}x{params.getColumnsAmount()}
       </Text>
+      <Field />
     </View>
   );
 }

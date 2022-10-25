@@ -1,9 +1,9 @@
 import { Dimensions } from "react-native";
 
 const params = {
-  blockSice: 30,
-  borderSizer: 5,
-  fontSizer: 15,
+  blockSize: 30,
+  borderSize: 5,
+  fontSize: 15,
   headerRatio: 0.15, // Header proportion on the top of the screen
   difficultLevel: 0.1, // % of mines on the battlefield
   getColumnsAmount() {
