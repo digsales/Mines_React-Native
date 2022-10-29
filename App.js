@@ -9,7 +9,7 @@ export default function App() {
       <Text style={styles.welcome}>Initializing Mines!</Text>
 
       <Text style={styles.introduction}>
-        Grade size: {params.getRowsAmount()}x{params.getColumnsAmount()}
+        Grid size: {params.getRowsAmount()}x{params.getColumnsAmount()}
       </Text>
 
       <Field />

@@ -8,12 +8,12 @@ const params = {
   difficultLevel: 0.1, // % of mines on the battlefield
   getColumnsAmount() {
     const width = Dimensions.get("window").width;
-    return Math.floor(width / this.blockSice);
+    return Math.floor(width / this.blockSize);
   },
   getRowsAmount() {
     const totalHeight = Dimensions.get("window").height;
     const boarderHeight = totalHeight * (1 - this.headerRatio);
-    return Math.floor(boarderHeight / this.blockSice);
+    return Math.floor(boarderHeight / this.blockSize);
   },
 };
 
