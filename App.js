@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, Alert } from "react-native";
+import { StyleSheet, SafeAreaView, View, Alert } from "react-native";
 import params from "./src/params";
 import MineField from "./src/components/MineField";
+import Header from "./src/components/Header";
 import {
   createMinedBoard,
   cloneBoard,
@@ -11,6 +12,7 @@ import {
   showMines,
   wonGame,
   invertFlag,
+  flagsUsed,
 } from "./src/functions";
 
 export default class App extends Component {
@@ -67,12 +69,11 @@ export default class App extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Initializing Mines!</Text>
-
-        <Text style={styles.introduction}>
-          Grid size: {params.getRowsAmount()}x{params.getColumnsAmount()}
-        </Text>
+      <SafeAreaView style={styles.container}>
+        <Header
+          flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
+          onNewGame={() => this.setState(this.createState())}
+        />
 
         <View style={styles.board}>
           <MineField
@@ -81,7 +82,7 @@ export default class App extends Component {
             onSelectField={this.onSelectField}
           />
         </View>
-      </View>
+      </SafeAreaView>
     );
   }
 }
