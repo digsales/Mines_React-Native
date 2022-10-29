@@ -17,7 +17,7 @@ export default (props) => {
   if (nearMines > 0) {
     if (nearMines == 1) color = "#00008B";
     if (nearMines == 2) color = "#008000";
-    if (nearMines > 2 && nearMines < 6) color = "#FF8C00";
+    if (nearMines > 2 && nearMines < 6) color = "#f26337";
     if (nearMines >= 6) color = "#B22222";
   }
 
