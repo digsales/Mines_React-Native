@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
   },
   flagsLeft: {
     fontSize: 30,
+    fontFamily: "monospace",
     fontWeight: "bold",
     paddingTop: 5,
     marginLeft: 20,
@@ -53,6 +54,7 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   buttonLabel: {
+    fontFamily: "monospace",
     fontSize: 20,
     fontWeight: "bold",
   },
