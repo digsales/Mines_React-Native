@@ -65,9 +65,7 @@ const getNeighbors = (board, row, column) => {
 };
 
 const safeNeighborhood = (board, row, column) => {
-  const safes = (result, neighbor) => {
-    result && !neighbor.mined;
-  };
+  const safes = (result, neighbor) => result && !neighbor.mined;
   return getNeighbors(board, row, column).reduce(safes, true);
 };
 
