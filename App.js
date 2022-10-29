@@ -1,30 +1,33 @@
+import React, { Component } from "react";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import params from "./src/params";
 import Field from "./src/components/Field";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.welcome}>Initializing Mines!</Text>
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Initializing Mines!</Text>
 
-      <Text style={styles.introduction}>
-        Grid size: {params.getRowsAmount()}x{params.getColumnsAmount()}
-      </Text>
+        <Text style={styles.introduction}>
+          Grid size: {params.getRowsAmount()}x{params.getColumnsAmount()}
+        </Text>
 
-      <Field />
-      <Field opened />
-      <Field opened nearMines={1} />
-      <Field opened nearMines={2} />
-      <Field opened nearMines={3} />
-      <Field opened nearMines={6} />
-      <Field mined />
-      <Field mined opened />
-      <Field mined opened exploded />
-      <Field flagged />
-      <Field flagged opened />
-    </View>
-  );
+        <Field />
+        <Field opened />
+        <Field opened nearMines={1} />
+        <Field opened nearMines={2} />
+        <Field opened nearMines={3} />
+        <Field opened nearMines={6} />
+        <Field mined />
+        <Field mined opened />
+        <Field mined opened exploded />
+        <Field flagged />
+        <Field flagged opened />
+      </View>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
