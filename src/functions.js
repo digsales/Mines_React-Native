@@ -23,7 +23,7 @@ const spreadMines = (board, minesAmount) => {
   const columns = board[0].length;
   let minesPlanted = 0;
   while (minesPlanted < minesAmount) {
-    const rowSel = paserInt(Math.random() * rows, 10);
+    const rowSel = parseInt(Math.random() * rows, 10);
     const columnSel = parseInt(Math.random() * columns, 10);
 
     if (!board[rowSel][columnSel].mined) {
